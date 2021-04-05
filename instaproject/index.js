@@ -2,7 +2,7 @@ require('dotenv').config();
 //we need this for protecting your passwords and usernames
 const insta = require('instagram-web-api'); 
 
-const client = new insta({ username: 'umbels_bot', password: 'bigjose007' }); 
+const client = new insta({ username: 'umbels_bot', password: process.env.TOKEN }); 
 //you need to put your username and passowrd in a .env file. your usernmae HAS you be your username not email or phone number. 
 client.login().then(async () => {
     function intervalFunc(){
@@ -17,7 +17,8 @@ client.login().then(async () => {
         let memeTitle = jsonData.data.title;
 
     await client.login(); 
-
+    if(client.login) console.log('bot logged in successfully!'); 
+    if(!client.login) console.log('bot had a problem loggin in :('); 
 
         const moment = require('moment'); 
         client.uploadPhoto({ photo: memeImage, 
@@ -35,7 +36,7 @@ client.login().then(async () => {
             //this makes life so much easier, because now all we have to do is multiply x by a number, 
             //and that number will be how many minutes we want!
 
-            setTimeout(intervalFunc, x*15); //example, this is a 15 minute interval! 
+            setTimeout(intervalFunc, x*10); //example, this is a 15 minute interval! 
             if(!intervalFunc) intervalFunc(); 
         }
     )}
