@@ -40,11 +40,6 @@ client.login().then(async () => {
         }
     )}
     intervalFunc(); 
-    if(intervalFunc() === error) try {
-        intervalFunc(); 
-    } catch (error) {
-        console.log(error); 
-    }
     //starts the function! and if there's an error, it will keep trying the function untill it works!
 })
 
