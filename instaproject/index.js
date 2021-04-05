@@ -27,7 +27,6 @@ client.login().then(async () => {
             I take *NO CREDIT* for any of these memes. *ALL* of the credit for this meme go u/${creditToAuthor}, 
             however, I do take credit for making this bot. If you have questions about the bot, the best way to get ahold of me is my reddit account: https://www.reddit.com/user/umbel__
             wear a mask, stay inside, stay safe!`, post: 'feed' });  
-            if(!client.uploadPhoto) intervalFunc(); 
             const time = moment().format('MMMM Do YYYY, h:mm:ss a'); 
             console.log(`meme uploaded at ${time}`); 
             //posts said memes to it's insta feed
@@ -37,11 +36,14 @@ client.login().then(async () => {
             //and that number will be how many minutes we want!
 
             setTimeout(intervalFunc, x*10); //example, this is a 15 minute interval! 
-            if(!intervalFunc) intervalFunc(); 
+
         }
     )}
     intervalFunc(); 
-    //repeates the function!
+    if(!intervalFunc()) intervalFunc(); else {
+        continue; 
+    }
+    //starts the function! and if there's an error, it will keep trying the function untill it works!
 })
 
 //things to do for this bot: 
