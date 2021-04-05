@@ -40,9 +40,7 @@ client.login().then(async () => {
         }
     )}
     intervalFunc(); 
-    if(!intervalFunc()) intervalFunc(); else {
-        continue; 
-    }
+    if(!intervalFunc()) intervalFunc(); 
     //starts the function! and if there's an error, it will keep trying the function untill it works!
 })
 
