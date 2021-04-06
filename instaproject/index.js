@@ -16,6 +16,8 @@ client.login().then(async () => {
         let memeImage = jsonData.data.url; 
         let memeTitle = jsonData.data.title;
 
+        if(!memeImage.endsWith('.jpg' || '.jpeg')) intervalFunc(); else {
+        
     await client.login(); 
     if(client.login) console.log('bot logged in successfully!'); 
     if(!client.login) console.log('bot had a problem loggin in :('); 
@@ -36,7 +38,7 @@ client.login().then(async () => {
             //and that number will be how many minutes we want!
 
             setTimeout(intervalFunc, x*10); //example, this is a 15 minute interval! 
-
+            }
         }
     )}
     intervalFunc(); 
