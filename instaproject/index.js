@@ -33,11 +33,8 @@ client.login().then(async () => {
             console.log(`meme uploaded at ${time}`); 
             //posts said memes to it's insta feed
             x = 60000; 
-            //"x" is equal to 60000 milleseconds. AKA 1 minute. 
-            //this makes life so much easier, because now all we have to do is multiply x by a number, 
-            //and that number will be how many minutes we want!
-
-            setTimeout(intervalFunc, x*10); //example, this is a 15 minute interval! 
+            
+            setTimeout(intervalFunc, x*10);
             }
         }
     )}
