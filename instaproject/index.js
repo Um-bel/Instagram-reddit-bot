@@ -43,6 +43,6 @@ client.login().then(async () => {
 })
 
 //things to do for this bot: 
-//make it so you cant get 2 of the same memes, i have a hlafproof method right now, but it might not be perfect
+//make it so you cant get 2 of the same memes, i have a halfproof method right now, but it might not be perfect
 //make it so if the aspect ratio is not usable, it will find a new meme. 
 //host it 24/7, probably with heroku, but AWS is also a good method. 
